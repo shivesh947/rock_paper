@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCK</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+</head>
+
+<style type="text/css">
+  #l1,#l2,#l3,#r1,#r2,#r3
+    {
+        
+        display: none
+    }
+    #lft,#rgt
+    {
+        width: 50px;
+        height: 50px;
+    }
+    #gamecont
+    {
+        display: none;
+    }
+</style>
+
+<script type="text/javascript" src="rockgame.js"></script>
+<body>
+
+   <div id="gamecont">
+    <div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6" id="left" style="height:325px;margin:0px;background-color:#00D9FF;padding:4px;">
+                    <div id="leftchance" width="93px" height="78px" style="margin:19px 211px;"></div>
+                     <h1><div id="play1">0</div><h1>
+                    <input type="button" class="btn btn-primary" onclick="myFunction(0)" id="mm" type="button" style="margin:0px 143px;" value="player1" />
+
+                   
+                    <img src="assets/img/button.png" id="srt1" style=" height:100px;width:154px;margin:12px 101px;">
+                    <img src="assets/img/rock.png" id="l1" style=" height:138px;width:154px;margin:12px 101px;">
+                    <img src="assets/img/pp.png" id="l2"style="height:138px;width:154px;margin:12px 101px;">
+                    <img src="assets/img/sc.png" id="l3" style="height:138px;width:154px;margin:12px 101px;">
+                </div>
+
+                <div class="col-md-6" id="right" style="height:325px;margin:0px;background-color:#FF8119;padding:0px;">
+                    <img src="assets/img/button.png" id="srt2" style=" height:100px;width:154px;margin:12px 101px;">
+                    <img  src="assets/img/rock.png" id="r1" style="margin:19px 103px;width:154px;height:138px;" >
+                    <img  src="assets/img/pp.png" id="r2" style="margin:19px 103px;width:154px;height:138px;">
+                    <img  src="assets/img/sc.png" id="r3" style="margin:19px 103px;width:154px;height:138px;">
+                    
+                    
+                    <input type="button" class="btn btn-primary" onclick="myFunction(1)" id="pp" type="button" style="margin:0px 143px;" value="player2" />
+
+                    <h1><div id="play2">0</div><h1>
+
+                    <div id="rightchance" width="93px" height="78px" style="margin:6px 218px;"></div>
+                   
+                </div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+   </div>
+
+   <div id="login">
+        <div class="login-clean">
+            
+        <form style="height:485px;width:332px;">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration" style="background-image:url(&quot;assets/img/download.jpg&quot;);height:176px;width:274px;"></div>
+            <div class="form-group">
+                <input class="form-control" type="name" name="stplayer" id="firstplayer" placeholder="player 1" value="player1" ></div>
+            <div class="form-group">
+                <input class="form-control" type="name" name="secondplayer" id="secondplayer" placeholder="player2" value="player2">
+            </div>
+            <div class="form-group">
+                <img src="assets/img/start.png" class="btn btn-primary btn-block" id="start" onclick="gamestart()" style="font-size:32px; background-color: #ffffff00; width: 154px; margin-left: 45px;"/>
+            </div>
+      </form>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </div>
+
+
+    <div id="winner" style="display: none">
+        <div class="login-clean">
+           
+        <form  style="height:485px;width:332px;">
+            <img src="assets/img/back.png" style= "width:50%;margin-top:-70px; margin-left:-54px;" onclick="restart()" >
+            <img src="assets/img/trophy.png" style= "width:100%;margin-top:0px;" >
+            <h3 align=center id="winnam">player<h3>
+      </form>
+      </div>
+      <script src="assets/js/jquery.min.js"></script>
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  </div>
+
+</body>
+</html>
